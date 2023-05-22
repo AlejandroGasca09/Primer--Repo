@@ -17,17 +17,15 @@ import org.sqlite.JDBC;
                 Statement stm = conexion.createStatement();
                 ResultSet rst = stm.executeQuery("SELECT * FROM libros");
                 while (rst.next()){
-                    System.out.println(rst.getString(1) + " "+rst.getString(2));
+                    System.out.println(rst.getString(1) + "" + rst.getString(2));
                 }
                 conexion.close();
-            } catch (ClassNotFoundException e) {
-                e.printStackTrace();
-            }catch (SQLException e){
-                e.printStackTrace();
+
+            } catch (ClassNotFoundException cne) {
+                cne.printStackTrace();
+            } catch (SQLException sqle){
+                sqle.printStackTrace();
             }
 
-
         }
-
     }
-
