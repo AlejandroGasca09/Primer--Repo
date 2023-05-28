@@ -182,4 +182,8 @@ public class VentanaLibro extends JFrame {
     public void setPanel4(JPanel panel4) {
         this.panel4 = panel4;
     }
+    private void limpiar(){
+        txtTitulo.setText("");
+        txtAutor.setText("");
+    }
 }
